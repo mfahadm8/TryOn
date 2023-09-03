@@ -34,6 +34,8 @@ python test.py
 --which_epoch 800
 
 folder structure:
+```bash
+
 ADGAN
 ├── checkpoints
 │   ├── fashion_AdaGen_sty512_nres8_lre3_SS_fc_vgg_cxloss_ss_merge3
@@ -70,3 +72,4 @@ ADGAN
 ├── tool
 ├── train.py
 └── util
+```
