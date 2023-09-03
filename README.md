@@ -12,8 +12,9 @@
 # TryOn
 
 
-## ADGAN
+### ADGAN
 test.sh:
+```bash
 python test.py
 --dataroot deepfashion
 --dirSem deepfashion
@@ -32,8 +33,9 @@ python test.py
 --no_flip
 --which_model_netG ADGen
 --which_epoch 800
+```
 
-folder structure:
+### folder structure:
 ```bash
 
 ADGAN
