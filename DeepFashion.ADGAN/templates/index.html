@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <title>Python Flask Bucket List App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ </head>
+ <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+ <script type=text/javascript>
+    $(function() {
+        $('#inProgress').hide();
+
+        $('button#test').bind('click', function() {
+            $('#inProgress').show();
+            // $.getJSON('/test', function (data) { })
+            // .done(function (data) {
+            //     console.log(data.message)
+            //     $('#results').show();
+            // });
+        });
+
+    });
+ </script> 
+<body>
+ 
+    <div class="container">
+        <div class="jumbotron">
+            <h1>DLS2020 DeepFashion (by sgoldyaev)</h1>
+            <p class="lead"></p>
+        </div>
+
+        <div class="row marketing">
+            <div class="col-lg-6">
+                <h4>Run Test</h4>
+                <form method=POST enctype=multipart/form-data action="{{ url_for('test_model') }}">
+                    <p>Add 176x256 Images, otherwise images will be resized 256x156 then croped 176x256</p>
+                    <input type=file name=file1>
+                    <input type=file name=file2>
+
+                    <p><button type="submit" id="test">RUN</button></p>
+                    <p id="inProgress">Please wait... you will get result in 20 secs.</p>
+                </form>
+            </div> 
+        </div>
+ 
+        <footer class="footer">
+            <p>&copy; Deep Learning School 2020</p>
+        </footer>
+ 
+    </div>
+</body>
+ 
+</html>
