@@ -1,0 +1,5 @@
+pip install jupyter
+jupyter notebook --ip localhost --port 3001 --no-browser
+pip install scikit-image==0.16.2 -f https://download.lfd.uci.edu/pythonlibs/w4tscw6k/scikit-image/
+pip3 install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu121
+python3.9 -m pip install scikit-image==0.18.0

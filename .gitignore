@@ -1,3 +1,7 @@
 **.venv/
-.ADGAN/deepfashion
+**deepfashion/
 **.git
+**checkpoints/
+**__pycache__
+**.zip
+**raw

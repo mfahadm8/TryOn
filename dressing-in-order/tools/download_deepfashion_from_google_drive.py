@@ -16,14 +16,14 @@ def download_from_gdrive(dst_root, fn, gdrive_path, iszip=True):
     os.system("mkdir {}".format(dst_root))
   if not os.path.exists("{}/{}".format(dst_root, fn)):
     os.system("gdown {}".format(gdrive_path))
-    if iszip:
-      os.system("unzip {}.zip".format(fn))
-      os.system("rm {}.zip".format(fn))
-    os.system("mv {} {}/".format(fn, dst_root))
+    # if iszip:
+    #   os.system("unzip {}.zip".format(fn))
+    #   os.system("rm {}.zip".format(fn))
+    # os.system("mv {} {}/".format(fn, dst_root))
   print("download {}.".format(fn))
 
 ## download data
-# https://drive.google.com/drive/folders/11wWszW1kskAyMIGJHBBZzHNKN3os6pu_
+# # https://drive.google.com/drive/folders/11wWszW1kskAyMIGJHBBZzHNKN3os6pu_
 download_from_gdrive(args.dataroot, "testM_lip", "1toeQwAe57LNPTy9EWGG0u1XfTI7qv6b1")
 download_from_gdrive(args.dataroot, "trainM_lip", "1OAsHXiyQRGCCZltWtBUj_y4xV8aBKLk5")
 download_from_gdrive(args.dataroot,"standard_test_anns.txt","19nJSHrQuoJZ-6cSl3WEYlhQv6ZsAYG-X",iszip=False)
@@ -38,6 +38,7 @@ download_from_gdrive(args.dataroot,"fasion-annotation-train.csv","1CkINRpr4L7E-Y
 download_from_gdrive(args.dataroot,"fasion-pairs-train.csv","13FrzVtjo0bRFJZn3f5VrV2R0FSWHikNF",iszip=False)
 download_from_gdrive(args.dataroot,"test.lst","1yi7xg1nJ9Ts5RbA_WsKq5lDUCwrXwGyn",iszip=False)
 download_from_gdrive(args.dataroot,"train.lst","1sbIw7M-CpLlT9L1kQfkdami-IPoHHWpC",iszip=False)
+
 
 # filter images (exclude training data and rename the files)
 if not os.path.exists(args.dataroot + "/test"):

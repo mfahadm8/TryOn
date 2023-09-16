@@ -75,3 +75,10 @@ ADGAN
 ├── train.py
 └── util
 ```
+
+
+### Dress In Order
+
+
+download_from_gdrive("checkpoints", "DIORv1_64", "1MyHq-P0c8zz7ey7p_HTTZKeMie5ZuNlb") 
+
